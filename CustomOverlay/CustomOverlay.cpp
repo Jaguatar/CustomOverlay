@@ -214,8 +214,8 @@ void CustomOverlay::Render(CanvasWrapper canvas)
 
 	screenSize = canvas.GetSize();
 
-	boostBoxSize.X = (int)((screenSize.X * 11.97F) / 100);
-	boostBoxSize.Y = (int)((screenSize.X * 11.97F) / 100);
+	boostBoxSize.X = (int)((screenSize.X * 10.F) / 100);
+	boostBoxSize.Y = (int)((screenSize.X * 10.F) / 100);
 	boostBoxPosition.X = (screenSize.X - boostBoxSize.X) - (int)((screenSize.X * 2.6F) / 100);
 	boostBoxPosition.Y = (screenSize.Y - boostBoxSize.Y) - (int)((screenSize.X * 2.6F) / 100);
 	boostTextSize = canvas.GetStringSize(std::to_string(boost), (float)((int)((boostBoxSize.X / 24) * 10) / 10), (float)((int)((boostBoxSize.Y / 24) * 10) / 10));
@@ -238,8 +238,8 @@ void CustomOverlay::Render(CanvasWrapper canvas)
 		canvas.SetColor(255, 235, 130, 255);
 	canvas.DrawString(std::to_string(boost), (float)((int)((boostBoxSize.X / 24) * 10) / 10), (float)((int)((boostBoxSize.Y / 24) * 10) / 10));
 
-	scoreBoxCenterSize.X = (int)((screenSize.X * 7F) / 100);
-	scoreBoxCenterSize.Y = (int)((screenSize.Y * 4F) / 100);
+	scoreBoxCenterSize.X = (int)((screenSize.X * 7.F) / 100);
+	scoreBoxCenterSize.Y = (int)((screenSize.Y * 4.F) / 100);
 	scoreBoxCenterPosition.X = (screenSize.X / 2) - (scoreBoxCenterSize.X / 2);
 	scoreBoxCenterPosition.Y = 0;
 	scoreBoxCenterTextSize = canvas.GetStringSize(gameTime, (float)((int)((scoreBoxCenterSize.X / 40) * 10) / 10), (float)((int)((scoreBoxCenterSize.X / 40) * 10) / 10));
@@ -253,7 +253,7 @@ void CustomOverlay::Render(CanvasWrapper canvas)
 	canvas.SetColor(255, 255, 255, 255);
 	canvas.DrawString(gameTime, (float)((int)((scoreBoxCenterSize.X / 40) * 10) / 10), (float)((int)((scoreBoxCenterSize.X / 40) * 10) / 10));
 
-	scoreBoxLeftSize.X = (int)(((screenSize.X * 2F) / 100) * 1.25F);
+	scoreBoxLeftSize.X = (int)(((screenSize.X * 2.F) / 100) * 1.25F);
 	scoreBoxLeftSize.Y = scoreBoxCenterSize.Y;
 	scoreBoxLeftPosition.X = scoreBoxCenterPosition.X - scoreBoxLeftSize.X;
 	scoreBoxLeftPosition.Y = 0;
